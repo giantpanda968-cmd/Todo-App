@@ -8,6 +8,7 @@ const App = () => {
   const [task, setTask] = useState([]);
   const [filter, setFilter] = useState("All");
 
+
   // Add Task Conditons----
 
   const onSubmithandler = (e) => {
@@ -61,10 +62,11 @@ const App = () => {
           title={title}
           setTitle={setTitle}
           onSubmithandler={onSubmithandler}
+          
         />
         {/* Your Activity */}
 
-        <FilterButtons filter={filter} setFilter={setFilter} />
+        <FilterButtons filter={filter} setFilter={setFilter}/>
 
         <div className="w-full flex justify-center items-center mt-5">
           <button
@@ -80,7 +82,7 @@ const App = () => {
         {/* Percentage show */}
 
         <p className="mt-5 text-sm">
-          You have 3 task(s) and you completed 33% out of 100%
+          You have {task.length} task(s) and you completed 33% out of 100%
         </p>
 
         {/* Your Task List */}

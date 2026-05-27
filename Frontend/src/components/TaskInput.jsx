@@ -1,6 +1,6 @@
 import React from "react";
 
-const TaskInput = ({ title, setTitle, onSubmithandler }) => {
+const TaskInput = ({ title, setTitle, onSubmithandler}) => {
   return (
     <form
       className="w-full h-fit flex flex-col gap-5"
@@ -16,10 +16,11 @@ const TaskInput = ({ title, setTitle, onSubmithandler }) => {
         onChange={(e) => {
           setTitle(e.target.value);
         }}
+        
       />
 
       <button
-        className=" sm:py-2 py-3 text-white rounded-md bg-blue-500 text-md cursor-pointer active:opacity-80"
+        className="sm:py-2 py-3 text-white rounded-md bg-linear-to-l from-blue-600 to-blue-500 text-md cursor-pointer active:opacity-80"
         type="submit"
       >
         Add
